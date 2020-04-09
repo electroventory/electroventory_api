@@ -5,7 +5,7 @@ python:
   - "3.7"
 
 install:
-  - pip install -pre pybuilder
+  - pip install --pre pybuilder
   - pyb install_dependencies
 
 script: "pyb"
