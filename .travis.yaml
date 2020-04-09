@@ -9,3 +9,9 @@ install:
   - pyb install_dependencies
 
 script: "pyb"
+
+branches:
+  only:
+    - configuration
+    - development
+    - master
