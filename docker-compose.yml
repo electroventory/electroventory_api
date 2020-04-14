@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        DJANGO_PORT: ${DJANGO_PORT}
+    image: electroventory-api
+    env_file:
+      - ./electroventory_api.env
+    ports:
+      - ${DJANGO_HOST_PORT}:${DJANGO_PORT}
